@@ -23,5 +23,5 @@ jobs:
               run: |
                 export KUBECONFIG=$(mktemp)
                 curl -H "Authorization: Bearer $JWT" https://k8sou.wfid.tremolo.dev/wftoken/token/user 2>/dev/null | jq -r '.token["kubectl Command"]' | sh
-                kubectl get cm -n gitlab-wf
+                kubectl get cm -n github-wf
 
